@@ -1,0 +1,11 @@
+{
+  "background_color": "#b75252",
+  "dir": "ltr",
+  "display": "standalone",
+  "name": "thillschen.github",
+  "orientation": "any",
+  "scope": "/",
+  "short_name": "thillschen.github",
+  "start_url": "/",
+  "theme_color": "#1a773f"
+}
