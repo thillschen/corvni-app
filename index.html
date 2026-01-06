@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>QCM CORVNI & SRC</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="dark-mode">
+<div class="container">
+
+<header>
+  <h1>QCM</h1>
+  <div>
+    <button id="quiz-corvni" class="active">CORVNI</button>
+    <button id="quiz-src">SRC</button>
+    <button id="lang-de" class="active">DE</button>
+    <button id="lang-fr">FR</button>
+    <button id="toggle-dark" class="active">DARK</button>
+    <button id="toggle-light">LIGHT</button>
+  </div>
+</header>
+
+<h2 id="quiz-title"></h2>
+<p id="progress"></p>
+
+<div id="question-box"></div>
+
+<div style="text-align:center; margin-top:20px;">
+  <button id="prev">Zurück</button>
+  <button id="confirm">Bestätigen</button>
+  <button id="next">Weiter</button>
+</div>
+
+</div>
+
+<script src="corvniQuestions.js"></script>
+<script src="srcQuestions.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
