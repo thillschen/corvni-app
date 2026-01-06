@@ -1,0 +1,167 @@
+/* ===== RESET ===== */
+* {
+  box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      }
+
+      /* ===== THEMES ===== */
+      body.dark {
+        background: #111;
+          color: #fff;
+          }
+
+          body.light {
+            background: #f2f2f2;
+              color: #000;
+              }
+
+              /* ===== APP LAYOUT ===== */
+              .app {
+                max-width: 720px;
+                  margin: auto;
+                    min-height: 100vh;
+                      display: flex;
+                        flex-direction: column;
+                        }
+
+                        /* ===== TOPBAR ===== */
+                        .topbar {
+                          padding: 10px;
+                            background: #1e1e1e;
+                            }
+
+                            body.light .topbar {
+                              background: #ddd;
+                              }
+
+                              .controls {
+                                display: flex;
+                                  flex-wrap: wrap;
+                                    gap: 6px;
+                                      margin-top: 8px;
+                                      }
+
+                                      select, button {
+                                        padding: 6px 10px;
+                                          font-size: 14px;
+                                            border-radius: 6px;
+                                              border: none;
+                                                cursor: pointer;
+                                                }
+
+                                                body.dark select,
+                                                body.dark button {
+                                                  background: #333;
+                                                    color: #fff;
+                                                    }
+
+                                                    body.light select,
+                                                    body.light button {
+                                                      background: #fff;
+                                                        color: #000;
+                                                          border: 1px solid #aaa;
+                                                          }
+
+                                                          /* ===== PROGRESS ===== */
+                                                          .progress-bar {
+                                                            height: 6px;
+                                                              background: #888;
+                                                              }
+
+                                                              #progressFill {
+                                                                height: 100%;
+                                                                  width: 0%;
+                                                                    background: #4caf50;
+                                                                      transition: width 0.3s;
+                                                                      }
+
+                                                                      /* ===== MAIN ===== */
+                                                                      main {
+                                                                        flex: 1;
+                                                                          padding: 20px;
+                                                                          }
+
+                                                                          #question {
+                                                                            margin-bottom: 20px;
+                                                                            }
+
+                                                                            /* ===== ANSWERS ===== */
+                                                                            #answers button {
+                                                                              width: 100%;
+                                                                                padding: 15px;
+                                                                                  margin-bottom: 10px;
+                                                                                    font-size: 16px;
+                                                                                      text-align: left;
+                                                                                        border-radius: 10px;
+                                                                                        }
+
+                                                                                        /* DEFAULT */
+                                                                                        body.dark #answers button {
+                                                                                          background: #2a2a2a;
+                                                                                            color: #fff;
+                                                                                            }
+
+                                                                                            body.light #answers button {
+                                                                                              background: #fff;
+                                                                                                color: #000;
+                                                                                                }
+
+                                                                                                /* SELECTED */
+                                                                                                body.dark #answers button.selected {
+                                                                                                  background: #fff;
+                                                                                                    color: #000;
+                                                                                                    }
+
+                                                                                                    body.light #answers button.selected {
+                                                                                                      background: #000;
+                                                                                                        color: #fff;
+                                                                                                        }
+
+                                                                                                        /* RESULT */
+                                                                                                        #answers button.correct {
+                                                                                                          background: #2e7d32 !important;
+                                                                                                            color: #fff !important;
+                                                                                                            }
+
+                                                                                                            #answers button.wrong {
+                                                                                                              background: #c62828 !important;
+                                                                                                                color: #fff !important;
+                                                                                                                }
+
+                                                                                                                /* ===== FOOTER ===== */
+                                                                                                                .footer {
+                                                                                                                  display: flex;
+                                                                                                                    justify-content: space-around;
+                                                                                                                      padding: 10px;
+                                                                                                                        background: #1e1e1e;
+                                                                                                                        }
+
+                                                                                                                        body.light .footer {
+                                                                                                                          background: #ddd;
+                                                                                                                          }
+
+                                                                                                                          .footer button {
+                                                                                                                            font-size: 18px;
+                                                                                                                              padding: 10px 16px;
+                                                                                                                                border-radius: 10px;
+                                                                                                                                }
+
+                                                                                                                                /* ===== MOBILE OPTIMIERUNG ===== */
+                                                                                                                                @media (max-width: 480px) {
+                                                                                                                                  #question {
+                                                                                                                                      font-size: 18px;
+                                                                                                                                        }
+
+                                                                                                                                          #answers button {
+                                                                                                                                              font-size: 15px;
+                                                                                                                                                  padding: 14px;
+                                                                                                                                                    }
+
+                                                                                                                                                      .footer button {
+                                                                                                                                                          font-size: 16px;
+                                                                                                                                                            }
+                                                                                                                                                            }
