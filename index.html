@@ -1,0 +1,39 @@
+<!--Version from 17.11.2024 by Nicolas MARMANN-->
+
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QCM CORVNI & SRC</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="dark-mode">
+  <div class="container">
+    <header>
+      <h1>QCM CORVNI & SRC</h1>
+      <div>
+        <button id="reset">RESET</button>
+        <button id="toggle-language-de" class="active">DE</button>
+        <button id="toggle-language-fr">FR</button>
+        <button id="toggle-dark" class="active">DARK</button>
+        <button id="toggle-light">LIGHT</button>
+      </div>
+    </header>
+    <section id="CORVNI-quiz">
+      <h2>CORVNI</h2>
+      <div id="corvni-questions"></div>
+    </section>
+    <section id="SRC-quiz">
+      <h2>SRC</h2>
+      <div id="src-questions"></div>
+    </section>
+  </div>
+  <script src="corvniQuestions.js"></script>
+  <script src="srcQuestions.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
