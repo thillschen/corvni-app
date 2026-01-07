@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+    <title>QCM Quiz</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        </head>
+        
+        <body class="dark">
+        
+        <div class="app">
+        
+          <!-- TOPBAR -->
+            <header class="topbar">
+                <span id="progressText">Frage 1 / 1</span>
+                
+                    <div class="controls">
+                          <select id="quizType">
+                                  <option value="corvni">CORVNI</option>
+                                          <option value="src">SRC</option>
+                                                </select>
+                                                
+                                                      <select id="questionCount">
+                                                              <option value="5">5</option>
+                                                                      <option value="10">10</option>
+                                                                              <option value="15">15</option>
+                                                                                      <option value="20">20</option>
+                                                                                              <option value="25">25</option>
+                                                                                                      <option value="30" selected>30</option>
+                                                                                                              <option value="all">ALLE</option>
+                                                                                                                    </select>
+                                                                                                                    
+                                                                                                                          <button id="toggleTheme">LIGHT</button>
+                                                                                                                                <button id="reset">RESET</button>
+                                                                                                                                    </div>
+                                                                                                                                      </header>
+                                                                                                                                      
+                                                                                                                                        <!-- PROGRESS -->
+                                                                                                                                          <div class="progress-bar">
+                                                                                                                                              <div id="progressFill"></div>
+                                                                                                                                                </div>
+                                                                                                                                                
+                                                                                                                                                  <!-- CONTENT -->
+                                                                                                                                                    <main>
+                                                                                                                                                        <h2 id="question">Frage</h2>
+                                                                                                                                                            <div id="answers"></div>
+                                                                                                                                                              </main>
+                                                                                                                                                              
+                                                                                                                                                                <!-- FOOTER -->
+                                                                                                                                                                  <footer class="footer">
+                                                                                                                                                                      <button id="prev">◀</button>
+                                                                                                                                                                          <button id="confirm">BESTÄTIGEN</button>
+                                                                                                                                                                              <button id="next">▶</button>
+                                                                                                                                                                                </footer>
+                                                                                                                                                                                
+                                                                                                                                                                                </div>
+                                                                                                                                                                                
+                                                                                                                                                                                <!-- SCRIPTS – REIHENFOLGE SEHR WICHTIG -->
+                                                                                                                                                                                <script src="corvniQuestions.js"></script>
+                                                                                                                                                                                <script src="srcQuestions.js"></script>
+                                                                                                                                                                                <script src="script.js"></script>
+                                                                                                                                                                                
+                                                                                                                                                                                </body>
+                                                                                                                                                                                </html>>
