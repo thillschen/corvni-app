@@ -3,68 +3,61 @@
 <head>
   <meta charset="UTF-8">
     <title>Funk Quiz – SRC & CORVNI</title>
-    
-      <!-- WICHTIG für Android / WebView -->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        </head>
+        <body>
         
-          <link rel="stylesheet" href="style.css">
-          </head>
-          <body>
-          
-          <div class="container">
-          
-            <!-- HEADER -->
-              <header>
-                  <h1>📡 Funk Quiz</h1>
-                  
-                      <select id="langSelect">
-                            <option value="de">Deutsch</option>
-                                  <option value="fr">Français</option>
-                                      </select>
-                                      
-                                          <select id="themeSelect" onchange="toggleTheme()">
-                                                <option value="light">🌞 Light</option>
-                                                      <option value="dark">🌙 Dark</option>
-                                                          </select>
-                                                            </header>
-                                                            
-                                                              <!-- EINSTELLUNGEN -->
-                                                                <section>
-                                                                    <select id="countSelect">
-                                                                          <option value="10">10 Fragen</option>
-                                                                                <option value="20">20 Fragen</option>
-                                                                                      <option value="30">30 Fragen</option>
-                                                                                            <option value="40">40 Fragen</option>
-                                                                                                  <option value="all">Alle Fragen (geordnet)</option>
-                                                                                                      </select>
-                                                                                                        </section>
-                                                                                                        
-                                                                                                          <!-- MENÜ -->
+        <div class="container">
+        
+          <header>
+              <h1>📡 Funk Quiz</h1>
+              
+                  <div id="modeIndicator">
+                        Aktiver Modus: <strong id="activeMode">SRC</strong>
+                            </div>
+                            
+                                <select id="langSelect">
+                                      <option value="de">Deutsch</option>
+                                            <option value="fr">Français</option>
+                                                </select>
+                                                
+                                                    <select id="themeSelect" onchange="toggleTheme()">
+                                                          <option value="light">🌞 Light</option>
+                                                                <option value="dark">🌙 Dark</option>
+                                                                    </select>
+                                                                      </header>
+                                                                      
+                                                                        <section class="menu">
+                                                                            <button onclick="setMode('src')">SRC – Seefunk</button>
+                                                                                <button onclick="setMode('corvni')">CORVNI – Binnenfunk</button>
+                                                                                  </section>
+                                                                                  
+                                                                                    <select id="countSelect">
+                                                                                        <option value="10">10 Fragen</option>
+                                                                                            <option value="20">20 Fragen</option>
+                                                                                                <option value="30">30 Fragen</option>
+                                                                                                    <option value="40">40 Fragen</option>
+                                                                                                        <option value="all">Alle Fragen (geordnet)</option>
+                                                                                                          </select>
+                                                                                                          
                                                                                                             <section class="menu">
-                                                                                                                <button onclick="startQuiz(false)">📘 Lernen</button>
-                                                                                                                    <button onclick="startQuiz(true)">📝 Prüfung</button>
+                                                                                                                <button onclick="startQuiz(false)">📘 Lernmodus</button>
+                                                                                                                    <button onclick="startQuiz(true)">📝 Prüfungsmodus</button>
                                                                                                                       </section>
                                                                                                                       
-                                                                                                                        <!-- MODUS -->
-                                                                                                                          <section class="menu">
-                                                                                                                              <button onclick="setMode('src')">SRC – Seefunk</button>
-                                                                                                                                  <button onclick="setMode('corvni')">CORVNI – Binnenfunk</button>
-                                                                                                                                    </section>
-                                                                                                                                    
-                                                                                                                                      <!-- QUIZ -->
-                                                                                                                                        <section id="quiz"></section>
-                                                                                                                                        
-                                                                                                                                          <!-- NAVIGATION -->
-                                                                                                                                            <button id="nextBtn" onclick="nextQuestion()" disabled>
-                                                                                                                                                ➡️ Nächste Frage
-                                                                                                                                                  </button>
-                                                                                                                                                  
-                                                                                                                                                  </div>
-                                                                                                                                                  
-                                                                                                                                                  <!-- SCRIPTS (REIHENFOLGE WICHTIG) -->
-                                                                                                                                                  <script src="srcQuestions.js"></script>
-                                                                                                                                                  <script src="corvniQuestions.js"></script>
-                                                                                                                                                  <script src="script.js"></script>
-                                                                                                                                                  
-                                                                                                                                                  </body>
-                                                                                                                                                  </html>>
+                                                                                                                        <section id="quiz"></section>
+                                                                                                                        
+                                                                                                                          <button id="nextBtn" onclick="nextQuestion()" disabled>
+                                                                                                                              ➡️ Nächste Frage
+                                                                                                                                </button>
+                                                                                                                                
+                                                                                                                                </div>
+                                                                                                                                
+                                                                                                                                <!-- Reihenfolge WICHTIG -->
+                                                                                                                                <script src="srcQuestions.js"></script>
+                                                                                                                                <script src="corvniQuestions.js"></script>
+                                                                                                                                <script src="script.js"></script>
+                                                                                                                                
+                                                                                                                                </body>
+                                                                                                                                </html>>

@@ -1,175 +1,118 @@
-/* =========================
-   GLOBAL RESET & SICHERHEIT
-      ========================= */
+/* ===== RESET ===== */
+* {
+  box-sizing: border-box;
+  }
 
-      * {
-        box-sizing: border-box;
-        }
+  html, body {
+    margin: 0;
+      padding: 0;
+        width: 100%;
+          overflow-x: hidden;
+            font-family: system-ui, sans-serif;
+              background-color: #f4f6f8;
+                color: #222;
+                }
 
-        html, body {
-          width: 100%;
-            max-width: 100%;
-              overflow-x: hidden;
-                margin: 0;
-                  padding: 0;
-                    font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-                      background-color: #f4f6f8;
-                        color: #222;
-                        }
+                /* ===== CONTAINER ===== */
+                .container {
+                  max-width: 720px;
+                    margin: 0 auto;
+                      padding: 10px;
+                      }
 
-                        /* =========================
-                           CONTAINER
-                              ========================= */
+                      /* ===== HEADER ===== */
+                      header {
+                        display: block;
+                          text-align: center;
+                            margin-bottom: 10px;
+                            }
 
-                              .container {
-                                max-width: 800px;
-                                  width: 100%;
-                                    margin: 0 auto;
-                                      padding: 16px;
-                                      }
+                            header h1 {
+                              margin: 6px 0;
+                                font-size: 1.2rem;
+                                }
 
-                                      /* =========================
-                                         HEADER
-                                            ========================= */
+                                #modeIndicator {
+                                  font-size: 0.9rem;
+                                    margin-bottom: 6px;
+                                    }
 
-                                            header {
-                                              display: flex;
-                                                flex-direction: column;
-                                                  align-items: center;
-                                                    gap: 12px;
-                                                      margin-bottom: 20px;
-                                                      }
+                                    /* ===== FORM ELEMENTE ===== */
+                                    select,
+                                    button {
+                                      width: 100%;
+                                        padding: 8px;
+                                          margin-bottom: 6px;
+                                            font-size: 0.9rem;
+                                              border-radius: 6px;
+                                                border: none;
+                                                }
 
-                                                      header h1 {
-                                                        margin: 0;
-                                                          font-size: 1.6rem;
-                                                          }
+                                                /* ===== MENÜ ===== */
+                                                .menu {
+                                                  display: grid;
+                                                    grid-template-columns: 1fr 1fr;
+                                                      gap: 6px;
+                                                        margin-bottom: 6px;
+                                                        }
 
-                                                          /* =========================
-                                                             MENÜ / MODUS-KARTEN
-                                                                ========================= */
+                                                        .menu button {
+                                                          background-color: #e0e0e0;
+                                                            color: #000;
+                                                            }
 
-                                                                .menu {
-                                                                  display: flex;
-                                                                    flex-wrap: wrap;
-                                                                      gap: 12px;
-                                                                        justify-content: center;
-                                                                          margin-bottom: 20px;
-                                                                          }
+                                                            /* ===== QUIZ ===== */
+                                                            #quiz {
+                                                              margin-top: 6px;
+                                                              }
 
-                                                                          .menu button {
-                                                                            flex: 1 1 140px;
-                                                                              max-width: 200px;
-                                                                                padding: 16px;
-                                                                                  border-radius: 12px;
-                                                                                    border: none;
-                                                                                      font-size: 1rem;
-                                                                                        background: #ffffff;
-                                                                                          color: #222;
-                                                                                            box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+                                                              #quiz h3 {
+                                                                margin: 4px 0;
+                                                                  font-size: 0.95rem;
+                                                                  }
+
+                                                                  #quiz p {
+                                                                    margin: 4px 0 6px 0;
+                                                                      font-size: 0.95rem;
+                                                                      }
+
+                                                                      #quiz button {
+                                                                        background-color: #ffffff;
+                                                                          border: 1px solid #ccc;
+                                                                            margin-bottom: 6px;
+                                                                              text-align: left;
+                                                                              }
+
+                                                                              /* ===== NAVIGATION ===== */
+                                                                              #nextBtn {
+                                                                                background-color: #2a2a2a;
+                                                                                  color: #ffffff;
+                                                                                    margin-top: 6px;
+                                                                                    }
+
+                                                                                    /* ===== FEEDBACK ===== */
+                                                                                    .correct {
+                                                                                      background-color: #2ecc71 !important;
+                                                                                        color: #000 !important;
+                                                                                        }
+
+                                                                                        .wrong {
+                                                                                          background-color: #e74c3c !important;
+                                                                                            color: #ffffff !important;
                                                                                             }
 
-                                                                                            /* =========================
-                                                                                               SELECTS & BUTTONS
-                                                                                                  ========================= */
+                                                                                            /* ===== DARK MODE ===== */
+                                                                                            body.dark {
+                                                                                              background-color: #121212;
+                                                                                                color: #ffffff;
+                                                                                                }
 
-                                                                                                  select, button {
-                                                                                                    width: 100%;
-                                                                                                      padding: 14px;
-                                                                                                        margin-bottom: 12px;
-                                                                                                          border-radius: 10px;
-                                                                                                            border: none;
-                                                                                                              font-size: 1rem;
-                                                                                                              }
+                                                                                                body.dark select,
+                                                                                                body.dark button {
+                                                                                                  background-color: #2a2a2a;
+                                                                                                    color: #ffffff;
+                                                                                                    }
 
-                                                                                                              button {
-                                                                                                                background: #2a2a2a;
-                                                                                                                  color: #ffffff;
-                                                                                                                  }
-
-                                                                                                                  button:active {
-                                                                                                                    transform: scale(0.98);
-                                                                                                                    }
-
-                                                                                                                    button:disabled {
-                                                                                                                      opacity: 0.6;
-                                                                                                                      }
-
-                                                                                                                      /* =========================
-                                                                                                                         QUIZ BEREICH
-                                                                                                                            ========================= */
-
-                                                                                                                            #quiz {
-                                                                                                                              margin-top: 20px;
-                                                                                                                              }
-
-                                                                                                                              #quiz h3 {
-                                                                                                                                font-size: 1.1rem;
-                                                                                                                                  margin-bottom: 16px;
-                                                                                                                                  }
-
-                                                                                                                                  /* =========================
-                                                                                                                                     ANTWORTEN
-                                                                                                                                        ========================= */
-
-                                                                                                                                        #quiz button {
-                                                                                                                                          text-align: left;
-                                                                                                                                            margin-bottom: 10px;
-                                                                                                                                            }
-
-                                                                                                                                            .correct {
-                                                                                                                                              background: #2ecc71 !important;
-                                                                                                                                                color: #000 !important;
-                                                                                                                                                }
-
-                                                                                                                                                .wrong {
-                                                                                                                                                  background: #e74c3c !important;
-                                                                                                                                                    color: #fff !important;
-                                                                                                                                                    }
-
-                                                                                                                                                    /* =========================
-                                                                                                                                                       DARK MODE
-                                                                                                                                                          ========================= */
-
-                                                                                                                                                          body.dark {
-                                                                                                                                                            background-color: #121212;
-                                                                                                                                                              color: #ffffff;
-                                                                                                                                                              }
-
-                                                                                                                                                              body.dark .container {
-                                                                                                                                                                background: transparent;
-                                                                                                                                                                }
-
-                                                                                                                                                                body.dark select,
-                                                                                                                                                                body.dark button {
-                                                                                                                                                                  background: #2a2a2a;
-                                                                                                                                                                    color: #ffffff;
-                                                                                                                                                                    }
-
-                                                                                                                                                                    body.dark .menu button {
-                                                                                                                                                                      background: #1e1e1e;
-                                                                                                                                                                      }
-
-                                                                                                                                                                      /* =========================
-                                                                                                                                                                         MOBILE FEINSCHLIFF
-                                                                                                                                                                            ========================= */
-
-                                                                                                                                                                            @media (max-width: 600px) {
-
-                                                                                                                                                                              header h1 {
-                                                                                                                                                                                  font-size: 1.4rem;
-                                                                                                                                                                                      text-align: center;
-                                                                                                                                                                                        }
-
-                                                                                                                                                                                          .menu {
-                                                                                                                                                                                              flex-direction: column;
-                                                                                                                                                                                                }
-
-                                                                                                                                                                                                  .menu button {
-                                                                                                                                                                                                      max-width: none;
-                                                                                                                                                                                                        }
-
-                                                                                                                                                                                                          select, button {
-                                                                                                                                                                                                              font-size: 1.05rem;
-                                                                                                                                                                                                                }
-                                                                                                                                                                                                                }
+                                                                                                    body.dark #quiz button {
+                                                                                                      background-color: #1e1e1e;
+                                                                                                      }
