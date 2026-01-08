@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+    <title>Funk Quiz – SRC & CORVNI</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+        <style>
+            body {
+                  font-family: system-ui, sans-serif;
+                        margin: 0;
+                              padding: 10px;
+                                    background: #121212;
+                                          color: #fff;
+                                              }
+                                                  body.light {
+                                                        background: #f4f6f8;
+                                                              color: #000;
+                                                                  }
+                                                                      #app {
+                                                                            max-width: 800px;
+                                                                                  margin: auto;
+                                                                                        background: #1e1e1e;
+                                                                                              padding: 16px;
+                                                                                                    border-radius: 12px;
+                                                                                                        }
+                                                                                                            body.light #app { background: #fff; }
+                                                                                                                h1 { text-align: center; }
+                                                                                                                    select, button {
+                                                                                                                          width: 100%;
+                                                                                                                                padding: 12px;
+                                                                                                                                      margin-bottom: 10px;
+                                                                                                                                            font-size: 1em;
+                                                                                                                                                  border-radius: 8px;
+                                                                                                                                                        border: none;
+                                                                                                                                                              cursor: pointer;
+                                                                                                                                                                  }
+                                                                                                                                                                      button { background: #2a2a2a; color: #fff; }
+                                                                                                                                                                          body.light button { background: #eaeaea; color: #000; }
+                                                                                                                                                                              .correct { background: #2ecc71 !important; color: #000; }
+                                                                                                                                                                                  .wrong { background: #e74c3c !important; color: #000; }
+                                                                                                                                                                                      .row {
+                                                                                                                                                                                            display: grid;
+                                                                                                                                                                                                  grid-template-columns: 1fr 1fr;
+                                                                                                                                                                                                        gap: 10px;
+                                                                                                                                                                                                            }
+                                                                                                                                                                                                              </style>
+                                                                                                                                                                                                              </head>
+                                                                                                                                                                                                              
+                                                                                                                                                                                                              <body>
+                                                                                                                                                                                                              <div id="app">
+                                                                                                                                                                                                                <h1>📡 Funk Quiz</h1>
+                                                                                                                                                                                                                
+                                                                                                                                                                                                                  <div class="row">
+                                                                                                                                                                                                                      <select id="langSelect">
+                                                                                                                                                                                                                            <option value="de">Deutsch</option>
+                                                                                                                                                                                                                                  <option value="fr">Français</option>
+                                                                                                                                                                                                                                      </select>
+                                                                                                                                                                                                                                      
+                                                                                                                                                                                                                                          <select id="themeSelect" onchange="toggleTheme()">
+                                                                                                                                                                                                                                                <option value="dark">🌙 Dark</option>
+                                                                                                                                                                                                                                                      <option value="light">🌞 Light</option>
+                                                                                                                                                                                                                                                          </select>
+                                                                                                                                                                                                                                                            </div>
+                                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                              <select id="countSelect">
+                                                                                                                                                                                                                                                                  <option value="10">10 Fragen</option>
+                                                                                                                                                                                                                                                                      <option value="20">20 Fragen</option>
+                                                                                                                                                                                                                                                                          <option value="30">30 Fragen</option>
+                                                                                                                                                                                                                                                                              <option value="40">40 Fragen</option>
+                                                                                                                                                                                                                                                                                  <option value="all">Alle Fragen (geordnet)</option>
+                                                                                                                                                                                                                                                                                    </select>
+                                                                                                                                                                                                                                                                                    
+                                                                                                                                                                                                                                                                                      <button onclick="startQuiz('src')">📘 SRC Lernmodus</button>
+                                                                                                                                                                                                                                                                                        <button onclick="startQuiz('corvni')">📘 CORVNI Lernmodus</button>
+                                                                                                                                                                                                                                                                                        
+                                                                                                                                                                                                                                                                                          <button onclick="startExam('src')">📝 SRC Prüfungsmodus</button>
+                                                                                                                                                                                                                                                                                            <button onclick="startExam('corvni')">📝 CORVNI Prüfungsmodus</button>
+                                                                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                                                              <div id="quiz"></div>
+                                                                                                                                                                                                                                                                                              
+                                                                                                                                                                                                                                                                                                <button id="nextBtn" onclick="nextQuestion()" disabled>
+                                                                                                                                                                                                                                                                                                    ➡️ Nächste Frage
+                                                                                                                                                                                                                                                                                                      </button>
+                                                                                                                                                                                                                                                                                                      </div>
+                                                                                                                                                                                                                                                                                                      
+                                                                                                                                                                                                                                                                                                      <script src="srcQuestions.js"></script>
+                                                                                                                                                                                                                                                                                                      <script src="corvniQuestions.js"></script>
+                                                                                                                                                                                                                                                                                                      <script src="quiz.js"></script>
+                                                                                                                                                                                                                                                                                                      
+                                                                                                                                                                                                                                                                                                      </body>
+                                                                                                                                                                                                                                                                                                      </html>>
