@@ -1,206 +1,175 @@
-body {
-  font-family: Arial, sans-serif;
-  display: flex;
-  justify-content: center;
-  padding: 20px;
-  margin: 0;
-}
+/* =========================
+   GLOBAL RESET & SICHERHEIT
+      ========================= */
 
-.dark-mode {
-  background-color: #121212;
-  color: #e0e0e0;
-}
-.light-mode {
-  background-color: #ffffff;
-  color: #121212;
-}
+      * {
+        box-sizing: border-box;
+        }
 
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-radius: 8px;
-  padding-right: 15px;
-  padding-left: 15px;
-  /*
-  position: fixed;
-  top: 0;
-  margin-top: 10px;
-  width: 50.65%;
-  z-index: 100;
-  */
-}
+        html, body {
+          width: 100%;
+            max-width: 100%;
+              overflow-x: hidden;
+                margin: 0;
+                  padding: 0;
+                    font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+                      background-color: #f4f6f8;
+                        color: #222;
+                        }
 
-.dark-mode header {
-  background-color: #333;
-  color: #e0e0e0;
-}
+                        /* =========================
+                           CONTAINER
+                              ========================= */
 
-.light-mode header {
-  background-color: #e0e0e0;
-  color: #121212;
-}
+                              .container {
+                                max-width: 800px;
+                                  width: 100%;
+                                    margin: 0 auto;
+                                      padding: 16px;
+                                      }
 
-button {
-  border: none;
-  padding: 8px 16px;
-  border-radius: 4px;
-  font-size: 16px;
-  margin-left: 10px;
-  transition: background-color 0.3s;
-}
+                                      /* =========================
+                                         HEADER
+                                            ========================= */
 
-.dark-mode button {
-  background-color: #1e1e1e;
-  color: #e0e0e0;
-}
+                                            header {
+                                              display: flex;
+                                                flex-direction: column;
+                                                  align-items: center;
+                                                    gap: 12px;
+                                                      margin-bottom: 20px;
+                                                      }
 
-.light-mode button {
-  background-color: #f1f1f1;
-  color: #121212;
-}
+                                                      header h1 {
+                                                        margin: 0;
+                                                          font-size: 1.6rem;
+                                                          }
 
-.dark-mode button:hover {
-  background-color: #555;
-  cursor: pointer;
-}
+                                                          /* =========================
+                                                             MENÜ / MODUS-KARTEN
+                                                                ========================= */
 
-.light-mode button:hover {
-  background-color: #cccccc;
-  cursor: pointer;
-}
+                                                                .menu {
+                                                                  display: flex;
+                                                                    flex-wrap: wrap;
+                                                                      gap: 12px;
+                                                                        justify-content: center;
+                                                                          margin-bottom: 20px;
+                                                                          }
 
-.dark-mode button.active {
-  background-color: #6390f1;
-  color: #fff;
-}
+                                                                          .menu button {
+                                                                            flex: 1 1 140px;
+                                                                              max-width: 200px;
+                                                                                padding: 16px;
+                                                                                  border-radius: 12px;
+                                                                                    border: none;
+                                                                                      font-size: 1rem;
+                                                                                        background: #ffffff;
+                                                                                          color: #222;
+                                                                                            box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+                                                                                            }
 
-.light-mode button.active {
-  background-color: #6390f1;
-  color: #fff;
-}
+                                                                                            /* =========================
+                                                                                               SELECTS & BUTTONS
+                                                                                                  ========================= */
 
-.dark-mode button.active:hover {
-  background-color: #555;
-  cursor: pointer;
-}
+                                                                                                  select, button {
+                                                                                                    width: 100%;
+                                                                                                      padding: 14px;
+                                                                                                        margin-bottom: 12px;
+                                                                                                          border-radius: 10px;
+                                                                                                            border: none;
+                                                                                                              font-size: 1rem;
+                                                                                                              }
 
-.light-mode button.active:hover {
-  background-color: #cccccc;
-  cursor: pointer;
-}
+                                                                                                              button {
+                                                                                                                background: #2a2a2a;
+                                                                                                                  color: #ffffff;
+                                                                                                                  }
 
-.dark-mode button:active {
-  background-color: #6390f1;
-  color: #fff;
-  transition: background-color 0.15s;
-}
+                                                                                                                  button:active {
+                                                                                                                    transform: scale(0.98);
+                                                                                                                    }
 
-.light-mode button:active {
-  background-color: #6390f1;
-  color: #fff;
-  transition: background-color 0.15s;
-}
+                                                                                                                    button:disabled {
+                                                                                                                      opacity: 0.6;
+                                                                                                                      }
 
-.container {
-  width: 90%;
-  max-width: 800px;
-  padding: 20px;
-  border-radius: 8px;
-  /*margin-top: 80px;*/
-}
+                                                                                                                      /* =========================
+                                                                                                                         QUIZ BEREICH
+                                                                                                                            ========================= */
 
-.dark-mode .container {
-  background-color: #1e1e1e;
-}
+                                                                                                                            #quiz {
+                                                                                                                              margin-top: 20px;
+                                                                                                                              }
 
-.light-mode .container {
-  background-color: #f1f1f1;
-}
+                                                                                                                              #quiz h3 {
+                                                                                                                                font-size: 1.1rem;
+                                                                                                                                  margin-bottom: 16px;
+                                                                                                                                  }
 
-h1, h2 {
-  text-align: center;
-  margin-bottom: 20px;
-}
+                                                                                                                                  /* =========================
+                                                                                                                                     ANTWORTEN
+                                                                                                                                        ========================= */
 
-label {
-  font-size: 16px;
-  line-height: 1.5;
-}
+                                                                                                                                        #quiz button {
+                                                                                                                                          text-align: left;
+                                                                                                                                            margin-bottom: 10px;
+                                                                                                                                            }
 
-.question {
-  padding: 15px;
-  margin-bottom: 20px;
-  border-radius: 8px;
-  box-shadow: none;
-  border: none;
-}
+                                                                                                                                            .correct {
+                                                                                                                                              background: #2ecc71 !important;
+                                                                                                                                                color: #000 !important;
+                                                                                                                                                }
 
-.dark-mode .question {
-  background-color: #2a2a2a;
-}
+                                                                                                                                                .wrong {
+                                                                                                                                                  background: #e74c3c !important;
+                                                                                                                                                    color: #fff !important;
+                                                                                                                                                    }
 
-.light-mode .question {
-  background-color: #eaeaea;
-}
+                                                                                                                                                    /* =========================
+                                                                                                                                                       DARK MODE
+                                                                                                                                                          ========================= */
 
-.options {
-  list-style: none;
-  padding: 0;
-  margin-top: 10px;
-}
+                                                                                                                                                          body.dark {
+                                                                                                                                                            background-color: #121212;
+                                                                                                                                                              color: #ffffff;
+                                                                                                                                                              }
 
-.options li {
-  display: flex;
-  align-items: center;
-  margin-bottom: 10px;
-}
+                                                                                                                                                              body.dark .container {
+                                                                                                                                                                background: transparent;
+                                                                                                                                                                }
 
-.option-checkbox {
-  appearance: none;
-  width: 20px;
-  height: 20px;
-  border: 2px solid;
-  border-radius: 50%;
-  margin-right: 15px;
-  flex-shrink: 0;
-  cursor: pointer;
-  position: relative;
-}
+                                                                                                                                                                body.dark select,
+                                                                                                                                                                body.dark button {
+                                                                                                                                                                  background: #2a2a2a;
+                                                                                                                                                                    color: #ffffff;
+                                                                                                                                                                    }
 
-.dark-mode .option-checkbox {
-  background-color: #333;
-  border-color: #555;
-}
+                                                                                                                                                                    body.dark .menu button {
+                                                                                                                                                                      background: #1e1e1e;
+                                                                                                                                                                      }
 
-.light-mode .option-checkbox {
-  background-color: #f2f2f2;
-  border-color: #b3b3b3;
-}
+                                                                                                                                                                      /* =========================
+                                                                                                                                                                         MOBILE FEINSCHLIFF
+                                                                                                                                                                            ========================= */
 
-.option-checkbox:checked {
-  background-color: #6390f1;
-  border-color: #6390f1;
-}
+                                                                                                                                                                            @media (max-width: 600px) {
 
-.option-checkbox:checked::after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: #fff;
-}
+                                                                                                                                                                              header h1 {
+                                                                                                                                                                                  font-size: 1.4rem;
+                                                                                                                                                                                      text-align: center;
+                                                                                                                                                                                        }
 
-.correct {
-  color: #4CAF50;
-  font-weight: bold;
-}
+                                                                                                                                                                                          .menu {
+                                                                                                                                                                                              flex-direction: column;
+                                                                                                                                                                                                }
 
-.incorrect {
-  color: #f44336;
-  font-weight: bold;
-}
+                                                                                                                                                                                                  .menu button {
+                                                                                                                                                                                                      max-width: none;
+                                                                                                                                                                                                        }
+
+                                                                                                                                                                                                          select, button {
+                                                                                                                                                                                                              font-size: 1.05rem;
+                                                                                                                                                                                                                }
+                                                                                                                                                                                                                }
